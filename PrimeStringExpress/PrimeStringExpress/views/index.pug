@@ -13,9 +13,7 @@ block content
     if error !== null
         label(value=error) #{error}
 
-// I would like to implemnt jquery so that when a key is pressed the id is formed
-//    script.
-//        $('#index').on('change', function(e) {
-//            //debugger;
-//            $.post('/' ,parseInt($('#index').val()));
-//        });
+    script.
+        $('#index').on('change', function() {            
+            $('form')[0].submit();
+        });
