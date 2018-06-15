@@ -8,10 +8,10 @@ block content
     button(type='submit' style='margin=1%;') Submit
         
     if minionID !== null
-        label(value=minionID style='font-weight: bold;') #{minionID} 
+        label(value=minionID, style='font-weight: bold; margin:1%') #{minionID} 
 
     if error !== null
-        label(value=error) #{error}
+        label(value=error, style='margin-left:10px; color:red;') #{error}
 
     script.
         $('#index').on('change', function() {            
