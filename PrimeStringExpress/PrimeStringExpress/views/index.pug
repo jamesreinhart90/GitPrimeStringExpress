@@ -1,0 +1,21 @@
+﻿extends layout
+
+block content
+    h1.value= title
+    p Please enter a number between 1 and a 1,000 to get a 5 digit code.
+
+    input#index(value=locals.index, name='indexValue', style='width=10%; margin:1%;' type='number', min='1', max='1000', required)
+    button(type='submit' style='margin=1%;') Submit
+        
+    if minionID !== null
+        label(value=minionID style='font-weight: bold;') #{minionID} 
+
+    if error !== null
+        label(value=error) #{error}
+
+// I would like to implemnt jquery so that when a key is pressed the id is formed
+//    script.
+//        $('#index').on('change', function(e) {
+//            //debugger;
+//            $.post('/' ,parseInt($('#index').val()));
+//        });
